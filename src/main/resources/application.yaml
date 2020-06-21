@@ -20,5 +20,3 @@ spring:
     console:
       enabled: true
       path: /persistence
-server:
-  port: 8085
