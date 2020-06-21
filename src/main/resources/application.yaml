@@ -1,0 +1,24 @@
+service:
+  settings:
+    itunes:
+      target: https://itunes.apple.com
+    sync:
+      count: 5 # As per task requirements
+      frequency: 1d # Once a day
+spring:
+  datasource:
+    url: jdbc:h2:mem:TOP5;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL
+    driver-class-name: org.h2.Driver
+    username: user
+    password: pass
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /persistence
+server:
+  port: 8085
